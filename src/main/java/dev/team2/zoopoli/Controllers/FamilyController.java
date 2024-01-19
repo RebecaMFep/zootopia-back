@@ -1,5 +1,7 @@
 package dev.team2.zoopoli.Controllers;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import dev.team2.zoopoli.Models.Family;
+import dev.team2.zoopoli.Services.FamilyService;
 
 @CrossOrigin
 @RestController
@@ -40,7 +45,7 @@ public class FamilyController {
     public ResponseEntity<?> store(@RequestBody  Family newFamily) {
 
         try {
-            return ResponseEntity.ok(service.save(newFamily));
+            return ResponseEntity.ok(service.service(newFamily));
         } catch (Exception e) {
             return ResponseEntity.status(500).body("Error");
         }

@@ -2,6 +2,9 @@ package dev.team2.zoopoli.Services;
 
 import org.springframework.stereotype.Service;
 
+import dev.team2.zoopoli.Models.Family;
+import dev.team2.zoopoli.Repositories.FamilyRepository;
+
 @Service
 
 public class FamilyService {
