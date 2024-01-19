@@ -19,8 +19,10 @@ public class Family {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_family")
     private Long id;
+
     @Column(nullable = false)
     private String name;
+    
     @OneToMany
     @JoinColumn(name = "id_family")
     private List<Specie> specie;

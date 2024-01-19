@@ -1,7 +1,7 @@
 package dev.team2.zoopoli.Controllers;
 
 import dev.team2.zoopoli.Services.SpecieService;
-import dev.team2.zoopoli.Models.*;
+import dev.team2.zoopoli.Models.Specie;
 
 import java.util.List;
 

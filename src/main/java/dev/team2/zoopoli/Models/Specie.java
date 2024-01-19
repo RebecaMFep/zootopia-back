@@ -1,6 +1,6 @@
 package dev.team2.zoopoli.Models;
 
-import org.hibernate.mapping.List;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,54 +13,53 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "species")
-    
 public class Specie {
     
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name = "id_specie")
-private Long id;
-@Column(nullable = false)
-private String name;
-private Long id_family; 
-@OneToMany
-@JoinColumn(name = "id_specie")
-private List<Specimen> specimen;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_specie")
+    private Long id;
 
-public Specie(Long id, String name, Long id_family) {
-    this.id = id;
-    this.name = name;
-    this.id_family=id_family;
+    @Column(nullable = false)
+    private String name;
+    private Long id_family; 
+
+    @OneToMany
+    @JoinColumn(name = "id_specie")
+    private List<Animal> animal;
+
+    public Specie(Long id, String name, Long id_family) {
+        this.id = id;
+        this.name = name;
+        this.id_family=id_family;
     
-}
+    }
 
-public Specie() {
+    public Specie() {
     
-}
+    }
 
+    public Long getId() {
+        return id;
+    }
 
-public Long getId() {
-    return id;
-}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-public void setId(Long id) {
-    this.id = id;
-}
+    public String getName() {
+        return name;
+    }
 
-public String getName() {
-    return name;
-}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-public void setName(String name) {
-    this.name = name;
-}
+    public Long getId_family() {
+        return id_family;
+    }
 
-public Long getId_family() {
-    return id_family;
-}
-
-public void setId_family(Long id_family) {
-    this.id_family = id_family;
-}
-
+    public void setId_family(Long id_family) {
+        this.id_family = id_family;
+    }
 }

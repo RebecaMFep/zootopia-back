@@ -1,5 +1,7 @@
 package dev.team2.zoopoli.Services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import dev.team2.zoopoli.Models.Family;
@@ -31,6 +33,11 @@ public class FamilyService {
 
     public void delete(Long id) {
         repository.deleteById(id);
+    }
+
+    public Object service(Family newFamily) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'service'");
     }
 
     

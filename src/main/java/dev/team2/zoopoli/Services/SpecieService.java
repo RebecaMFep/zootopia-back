@@ -8,9 +8,6 @@ import dev.team2.zoopoli.Models.Specie;
 import dev.team2.zoopoli.Repositories.SpecieRepository;
 
 
-
-
-
 @Service
 
 public class SpecieService {
