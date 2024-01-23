@@ -27,8 +27,8 @@ public class FamilyService {
     }
 
     public Family save(Family newFamily) {
-        Family FamilySaved = repository.save(newFamily);
-        return FamilySaved;
+        Family savedFamily = repository.save(newFamily);
+        return savedFamily;
     }
 
     public void delete(Long id) {
